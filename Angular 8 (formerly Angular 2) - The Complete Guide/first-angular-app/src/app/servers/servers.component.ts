@@ -7,26 +7,18 @@ import { Component, OnInit} from '@angular/core';
 export class ServersComponent implements OnInit {
   useDisabledButton: boolean = true;
   additionalServers: any = 'No Server was created';
-  serverName: string = 'Default Server';
+  serverName: string = '';
+  serverCreated: boolean = false;
   constructor() { 
-    setTimeout(() => {
-      this.useDisabledButton = false;
-    }, 2000);
   }
   
   getDisabledStatus(){
-    return this.useDisabledButton;
+    return this.serverName === '';
   }
 
   generateNewServer(){
-    this.additionalServers = document.querySelector('app-server');
-    console.dir(this.additionalServers);
-    
-  }
-  onServerNameUpdate(event:any){
-    console.log(event);
-    
-    this.serverName = event.target.value;
+    this.serverCreated = true;
+    this.additionalServers = `The newly created server name is ${this.serverName}`;
   }
   ngOnInit() {
   }
