@@ -6,5 +6,5 @@
 <button class="btn btn-primary" [disabled]="getDisabledStatus()" (click)="generateNewServer()">Add Server</button>
 <p [innerText]="getDisabledStatus()"></p>
 <div [innerHTML]="additionalServers.innerHTML"></div>
-<div class = 'app-server'></div>
-<div class = 'app-server'></div>
+<app-server></app-server>
+<app-server></app-server>
