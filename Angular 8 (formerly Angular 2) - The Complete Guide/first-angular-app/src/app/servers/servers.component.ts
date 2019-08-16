@@ -9,6 +9,7 @@ export class ServersComponent implements OnInit {
   additionalServers: any = 'No Server was created';
   serverName: string = '';
   serverCreated: boolean = false;
+  servers: string[] = ['TestServer', 'TestServer1'];
   constructor() { 
   }
   
@@ -19,6 +20,7 @@ export class ServersComponent implements OnInit {
   generateNewServer(){
     this.serverCreated = true;
     this.additionalServers = `The newly created server name is ${this.serverName}`;
+    this.servers.push(this.serverName);
   }
   ngOnInit() {
   }
