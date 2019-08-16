@@ -5,9 +5,15 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './servers.component.html'
 })
 export class ServersComponent implements OnInit {
-
-  constructor() { }
-
+  useDisabledButton: boolean = true;
+  constructor() { 
+    setTimeout(() => {
+      this.useDisabledButton = false;
+    }, 2000);
+  }
+  getDisabledStatus(){
+    return this.useDisabledButton;
+  }
   ngOnInit() {
   }
 
