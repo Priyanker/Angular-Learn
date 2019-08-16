@@ -7,7 +7,7 @@ import { Component, OnInit} from '@angular/core';
 export class ServersComponent implements OnInit {
   useDisabledButton: boolean = true;
   additionalServers: any = 'No Server was created';
-  serverName: string = 'Default';
+  serverName: string = 'Default Server';
   constructor() { 
     setTimeout(() => {
       this.useDisabledButton = false;
