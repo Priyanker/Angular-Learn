@@ -7,6 +7,7 @@ import { Component, OnInit} from '@angular/core';
 export class ServersComponent implements OnInit {
   useDisabledButton: boolean = true;
   additionalServers: any = 'No Server was created';
+  serverName: string = 'Default';
   constructor() { 
     setTimeout(() => {
       this.useDisabledButton = false;
@@ -21,6 +22,11 @@ export class ServersComponent implements OnInit {
     this.additionalServers = document.querySelector('app-server');
     console.dir(this.additionalServers);
     
+  }
+  onServerNameUpdate(event:any){
+    console.log(event);
+    
+    this.serverName = event.target.value;
   }
   ngOnInit() {
   }
