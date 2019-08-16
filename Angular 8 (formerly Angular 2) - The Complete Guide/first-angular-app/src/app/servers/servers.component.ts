@@ -19,7 +19,7 @@ export class ServersComponent implements OnInit {
   }
 
   generateNewServer(){
-    this.additionalServers = document.querySelector('app-server');
+    this.additionalServers = document.querySelector('.app-server');
     console.dir(this.additionalServers);
     
   }
