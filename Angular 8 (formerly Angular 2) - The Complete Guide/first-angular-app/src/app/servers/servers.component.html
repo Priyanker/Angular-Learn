@@ -1,4 +1,6 @@
-<button class="btn btn-primary" [disabled]="getDisabledStatus()">Add Server</button>
+<label>Server Name</label>
+<button class="btn btn-primary" [disabled]="getDisabledStatus()" (click)="generateNewServer()">Add Server</button>
 <p [innerText]="getDisabledStatus()"></p>
+<div [innerHTML]="additionalServers.innerHTML"></div>
 <app-server></app-server>
 <app-server></app-server>
